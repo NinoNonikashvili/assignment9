@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".register2">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/arrowBack"
+        android:backgroundTint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/arrowBack"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/registerText"
+        android:textSize="28sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailwrapper"
+        app:layout_constraintTop_toBottomOf="@+id/registerTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nickname"
+        app:cornerRadius="5dp"
+        app:boxStrokeColor="@color/black"
+        android:layout_margin="20dp"
+        app:boxStrokeWidth="3dp"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:padding="20dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signUp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:cornerRadius="5dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:text="@string/signUp"
+        app:layout_constraintTop_toBottomOf="@+id/emailwrapper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toBottomOf="@+id/signUp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/warningtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+                />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

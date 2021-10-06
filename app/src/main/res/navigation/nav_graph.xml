@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loggedOut">
+
+    <fragment
+        android:id="@+id/register1"
+        android:name="com.example.registrationfirebasefragments.register1"
+        android:label="fragment_register1"
+        tools:layout="@layout/fragment_register1" >
+        <action
+            android:id="@+id/action_register1_to_register2"
+            app:destination="@id/register2" />
+        <action
+            android:id="@+id/action_register1_to_loggedOut"
+            app:destination="@id/loggedOut" />
+    </fragment>
+    <fragment
+        android:id="@+id/register2"
+        android:name="com.example.registrationfirebasefragments.register2"
+        android:label="fragment_register2"
+        tools:layout="@layout/fragment_register2" >
+        <action
+            android:id="@+id/action_register2_to_loggedOut"
+            app:destination="@id/loggedOut" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.registrationfirebasefragments.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_loggedOut"
+            app:destination="@id/loggedOut" />
+    </fragment>
+    <fragment
+        android:id="@+id/loggedOut"
+        android:name="com.example.registrationfirebasefragments.loggedOut"
+        android:label="fragment_logged_out"
+        tools:layout="@layout/fragment_logged_out" >
+        <action
+            android:id="@+id/action_loggedOut_to_register1"
+            app:destination="@id/register1" />
+        <action
+            android:id="@+id/action_loggedOut_to_login"
+            app:destination="@id/login" />
+    </fragment>
+</navigation>
